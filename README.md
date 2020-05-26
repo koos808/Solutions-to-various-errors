@@ -11,3 +11,10 @@ Solutions to various errors ::: 에러 발생 시 대처 및 해결 방안
   * 해결 방법
     * numpy 다운그레이드
     * 프롬프트에서 `pip install "numpy<1.17` -> 관리자 권한으로 실행
+* Information 성 불필요 메시지(messages) 미출력
+    ``` 
+    # Info성 불필요 메시지 미출력을 위한 작업
+    import os
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+    ```
+    
