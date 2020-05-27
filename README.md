@@ -38,6 +38,32 @@ Errors
     ```
 
 ---
+* GPU 사용시 설정 해줘야 할 것
+  * 추천 방법
+    ```
+    physical_devices = tf.config.experimental.list_physical_devices('GPU')
+    print("physical_devices-------------", len(physical_devices))
+    tf.config.experimental.set_memory_growth(physical_devices[0], True)
+    ```
+  * 차선택
+    ```
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    if gpus:
+        try:
+            # Restrict TensorFlow to only use the fourth GPU
+            tf.config.experimental.set_visible_devices(gpus[0], 'GPU')
+
+            # Currently, memory growth needs to be the same across GPUs
+            for gpu in gpus:
+                tf.config.experimental.set_memory_growth(gpu, True)
+            logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+            print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+        except RuntimeError as e:
+            # Memory growth must be set before GPUs have been initialized
+            print(e)
+    ```
+
+---
 * keras,tensorflow gpu version install : 재설치 및 세팅
   * tensorflow 설치 : `pip install --ignore-installed --upgrade tensorflow-gpu` or `pip install tensorflow-gpu`
     * tensorflow 확인 
@@ -47,9 +73,12 @@ Errors
       sess = tf.Session()
       print(sess.run(hello))
       ```
-  * keras 설치 : `conda install -c anaconda keras-gpu`
+  * keras 설치 : `conda install -c anaconda keras-gpu` or `conda install keras-gpu`
     * keras 확인
       * `import keras`
   * Numpy 설치 : `pip install "numpy<1.17`
   * [선택] pytorch 설치 : `conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`
   * [선택] conda 업데이트 : `conda update -n base -c defaults conda`
+  * [선택] pip 업데이트 : `python -m pip install --upgrade pip`
+  * [선택] 파이썬 버전 다운그레이드 : `conda install python=3.6`
+  * [선택] 가상환경 만들기 : `conda create -n koos_keras python=3.6`
