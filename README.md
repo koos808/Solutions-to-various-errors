@@ -36,4 +36,18 @@ Errors
     import warnings
     warnings.filterwarnings("ignore", category=UserWarning)
     ```
-    
+
+---
+* keras,tensorflow gpu version install : 재설치 및 세팅
+  * tensorflow 설치 : `pip install --ignore-installed --upgrade tensorflow-gpu` or `pip install tensorflow-gpu`
+    * tensorflow 확인 
+      ```
+      import tensorflow as tf
+      hello = tf.constant('Hello, TensorFlow!')
+      sess = tf.Session()
+      print(sess.run(hello))
+      ```
+  * keras 설치 : `conda install -c anaconda keras-gpu`
+    * keras 확인
+      * `import keras`
+  * Numpy 설치 : `pip install "numpy<1.17`
