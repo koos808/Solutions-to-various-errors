@@ -51,3 +51,5 @@ Errors
     * keras 확인
       * `import keras`
   * Numpy 설치 : `pip install "numpy<1.17`
+  * [선택] pytorch 설치 : `conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`
+  * [선택] conda 업데이트 : `conda update -n base -c defaults conda`
