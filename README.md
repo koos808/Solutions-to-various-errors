@@ -82,3 +82,15 @@ Errors
   * [선택] pip 업데이트 : `python -m pip install --upgrade pip`
   * [선택] 파이썬 버전 다운그레이드 : `conda install python=3.6`
   * [선택] 가상환경 만들기 : `conda create -n koos_keras python=3.6`
+
+  * 패키지 설치
+    * [선택] opencv 설치 : `pip install opencv-python` -> `import cv2`
+
+* 현재 저장되어 있는 패키지 목록 추출 및 재설치
+  * 패키지 추출 : `pip freeze > requirements.txt`
+  * 패키지 설치 : `pip install -r requirements.txt`
+  * requirements.text 버전 설치
+    * 버전 이상 설치 : `idna>=2.8`
+    * 2버전대의 아무 버전이나 설치 : `idna>=2.*`
+
+
