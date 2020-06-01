@@ -93,4 +93,16 @@ Errors
     * 버전 이상 설치 : `idna>=2.8`
     * 2버전대의 아무 버전이나 설치 : `idna>=2.*`
 
-
+* iopub 등의 쥬피터 노트북 메모리 부족 
+  * error example
+    ```
+    using Plots; plotly()
+    plot(real(sol[:,1]))
+    IOPub data rate exceeded.
+    The notebook server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--NotebookApp.iopub_data_rate_limit`.
+    ```
+  * start jupyter notebook at terminal : `jupyter notebook --NotebookApp.iopub_data_rate_limit=2147483647`
+  * Reference : https://github.com/JuliaLang/IJulia.jl/issues/528
