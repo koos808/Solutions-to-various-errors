@@ -86,6 +86,16 @@ Errors
   * 패키지 설치
     * [선택] opencv 설치 : `pip install opencv-python` -> `import cv2`
 
+* 연구실 컴퓨터 GTX 2080 TI에 맞는 CUDA, Cudnn, tensorflow version
+  * `CUDA` : 10.0
+  * `Cudnn` : 7.4.x (7.4.1 추천)
+  * `tensorflow-gpu` : 1.13.1
+    * `pip install --upgrade tensorflow-gpu==1.13.1`
+    * 버전 확인 : https://www.tensorflow.org/install/source_windows#tensorflow_1x=
+  * numpy 오류 나기 때문에 재설치
+    * `pip install "numpy<1.17"`
+  * 참고 : https://hansonminlearning.tistory.com/7
+    
 * 현재 저장되어 있는 패키지 목록 추출 및 재설치
   * 패키지 추출 : `pip freeze > requirements.txt`
   * 패키지 설치 : `pip install -r requirements.txt`
