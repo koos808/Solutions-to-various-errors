@@ -86,6 +86,12 @@ Errors
   * 패키지 설치
     * [선택] opencv 설치 : `pip install opencv-python` -> `import cv2`
 
+  * `vs code 필수 라이브러리 설치 목록`
+    * `Markdown+Math` : 수식 입력
+    * `Prettify JSON` : json 파일 정렬 라이브러리
+    * `Markdown PDF` : PDF 파일로 만들기
+    * `Korean Language Pack for visual ---` : 한국어 패치
+
 * 연구실 컴퓨터 GTX 2080 TI에 맞는 CUDA, Cudnn, tensorflow version
   * `CUDA` : 10.0
   * `Cudnn` : 7.4.x (7.4.1 추천)
