@@ -122,3 +122,43 @@ Errors
     ```
   * start jupyter notebook at terminal : `jupyter notebook --NotebookApp.iopub_data_rate_limit=2147483647`
   * Reference : https://github.com/JuliaLang/IJulia.jl/issues/528
+
+
+# 우분투(ubuntu 16.04) 환경 세팅
+  * 1.anaconda3 설치
+    * 설치 url : `https://docs.anaconda.com/anaconda/install/hashes/lin-3-64/` 
+    * ex) Anaconda3-2020.02-Linux-x86_64.sh
+    * commend에서 `bash Anaconda3-2020.02-Linux-x86_64.sh` 실행
+  * 2.가상환경 만들기
+    * `conda create -n (가상환경이름) python=(파이썬버전)`
+    * ex) `conda create -n koos_detect python=3.6`
+    * 이후 `source ~/.bashrc` 실행하면 설치 완료
+  * 3.주피터노트북 설치
+    * 설치 : `pip install jupyter --user`
+    * 설치 확인 : `jupyter notebook`
+    * 기본 설정파일 생성 : `jupyter-notebook --generate-config`
+    * 원격 연결시 사용할 비밀번호 설정하기
+      * 커멘드 창에서 `ipython` 입력 후 아래 입력
+      * `[1] from notebook.auth import security` 실행
+      * ## 구버전의 경우 import security가 아닌 import password인 경우도 있다.
+      * `[2] security.passwd()`
+      * 패스워드 입력창이 나오는데 원격연결로 접속시 사용할 비밀번호를 입력 & 확인한다.
+      * 그러면 아래 그림과 같이 Out: 'sha1:~~~' 과 같은 문자열이 출력되는데 전체를 복사한다.
+      * ipython에서 `exit()`를 입력하시면 기존의 터미널창으로 돌아갈 수 있다.
+    * VI에디터로 설정파일 수정하기
+      * jupyter 위에서 생성한 환경설정 파일은 리눅스의 홈 디렉토리아래 `.jupyter`라는 폴더 내부에 생성된다. 환경설정 파일이 존재하는 위치로 이동한 후 vi에디터를 이용해 수정한다.
+      * `cd ~` 디렉토리 이동
+      * `cd .jupyter`
+      * `vi jupyter_notebook_config.py`
+      * 참고 : vi 에디터 단축키 -> `i`(입력(insert)모드로 전환), `dd`(커서가 위치한 줄 삭제), `:wq`(저장 및 종료), `:/(찾고싶은 내용)`(검색), ESC(모드 빠져 나오기)
+      * 아래 사이트 참고하면 됨.
+      * 참고 사이트 : http://blog.naver.com/PostView.nhn?blogId=skyshin0304&logNo=221587513170&parentCategoryNo=&categoryNo=31&viewDate=&isShowPopularPosts=true&from=search
+    * open-cv imshow 안 될 때 아래 커멘드 입력
+      ```
+      sudo apt-get -y install libgtk2.0-dev
+      sudo apt-get -y install pkg-config
+      conda remove opencv
+      conda update conda
+      conda install --channel menpo opencv
+      pip install opencv-contrib-python
+      ```
