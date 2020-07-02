@@ -123,6 +123,15 @@ Errors
   * start jupyter notebook at terminal : `jupyter notebook --NotebookApp.iopub_data_rate_limit=2147483647`
   * Reference : https://github.com/JuliaLang/IJulia.jl/issues/528
 
+* 파이썬 64비트와 32비트 함께 사용하기(파이썬 32비트 설치)
+  * conda 프롬프트에서 아래 코드 실행
+  * `conda create -n py36_32`
+  * `conda activate py36_32`
+  * `conda config --env --set subdir win-32`
+  * `conda install python=3.6`
+  * `conda info` 실행 후 플랫폼에서 win-32인지 확인하기
+  * `conda deactivate` 실행 후 base의 플랫폼이 win-64인지 확인하기
+  
 
 # 우분투(ubuntu 16.04) 환경 세팅
   * 1.anaconda3 설치
