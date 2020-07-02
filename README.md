@@ -131,7 +131,18 @@ Errors
   * `conda install python=3.6`
   * `conda info` 실행 후 플랫폼에서 win-32인지 확인하기
   * `conda deactivate` 실행 후 base의 플랫폼이 win-64인지 확인하기
+  * 출처 : https://m.blog.naver.com/haanoon/221814660104
+  * 참고 하면 좋음 : 
   
+* 대신증권 api 이용
+  * 핸드폰 어플 `CYBOS Touch` 설치 후 비대면계좌 개설
+  * 비대면 계좌 개설 후 증권용 공인인증서 등록
+  * CYBOS Plus에 로그인
+  * `http://blog.naver.com/PostView.nhn?blogId=hjinha2&logNo=221185064559` 여기 참조
+  * python 32비트 설치 후 파이참 interpreter에서 파이썬 32비트 경로 지정
+  * win32com : `conda install pywin32`
+  * `DB Browser for SQLite` 설치 후 저장한 db확인
+  * 참고 : https://excelsior-cjh.tistory.com/105
 
 # 우분투(ubuntu 16.04) 환경 세팅
   * 1.anaconda3 설치
