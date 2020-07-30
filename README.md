@@ -4,6 +4,13 @@ Solutions to various errors ::: 에러 발생 시 대처 및 해결 방안
 Errors
 ===
 
+* vs code latex(수식) 포함하여 pdf 저장하는 방법
+  * `.md` 맨 아랫줄에 아래 코드 삽입하고 저장한 뒤 pdf로 저장하면 된다.
+    ```
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
+    ```
+
 ---
 * keras or tensorflow import시 numpy버전 때문에 발생하는 에러 
   * type 관련 에러
