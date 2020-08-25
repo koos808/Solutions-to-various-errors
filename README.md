@@ -5,6 +5,16 @@ TIP
 ===
 
 ### VS Code
+* vscode 초기 세팅
+  * 확장 tool 설치
+    * `Markdowns All in One`
+    * `Markdowns+Math`
+    * `VS Code Jupyter Notebook`
+    * `Markdown PDF`
+    * `Korean Language Pack for Visual Studio Code`
+  * 테마
+    * `Monokai` 또는 `Visual Studio Dark`
+
 * vs code latex(수식) 포함하여 pdf 저장하는 방법
   * `.md` 맨 아랫줄에 아래 코드 삽입하고 저장한 뒤 pdf로 저장하면 된다.
     ```
