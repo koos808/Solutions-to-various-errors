@@ -46,6 +46,9 @@ Errors
     locale.setlocale(locale.LC_ALL, 'ko_KR.UTF-8') 인 기존 코드를 다음과 같이 변경
     locale.setlocale(locale.LC_ALL, '')
     ```
+* keras 백엔드(backend)가 theano로 설정되어 있을 때 해결 방법
+  * `C:\Users\(사용자이름)\.keras\keras.json`에 들어가서 Backend를 theano에서 tensorflow로 바꿔주면 된다.
+  * https://3months.tistory.com/138
 
 ---
 * Information 성 불필요 메시지(messages) 미출력
