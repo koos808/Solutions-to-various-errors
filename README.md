@@ -89,6 +89,18 @@ Errors
             print(e)
     ```
 
+* anaconda, keras, tensorflow 설치
+  * 1) Anaconda 설치
+  * 2) Anaconda 설치 후 Anaconda Prompt 실행
+  * 3) 가상환경 생성 : [  conda create n 가상환경이름 python=3.6   ] 입력
+  * 4) 가상환경 접속 : [  activate 가상환경이름   ]
+  * 5) tensorflow 설치 : [ pip install tensorflow==1.14 ] or [ GPU version  pip install tensorflow-gpu==1.14 ]
+  * 6) keras 설치 : [  pip install keras==2.2.5  ]
+  * 7) 주피터노트북 설치 : [  pip install jupyter ]
+  * 8) numpy 다운그레이드 : [  pip install numpy ==1.16.1  ] 
+  * 9) pillow, opencv 설치 : [  conda install pillow opencv   ]
+  * 10) 주피터노트북 실행 :[ jupyter notebook ]
+
 ---
 * keras,tensorflow gpu version install : 재설치 및 세팅
   * tensorflow 설치 : `pip install --ignore-installed --upgrade tensorflow-gpu` or `pip install tensorflow-gpu`
