@@ -28,6 +28,18 @@ TIP
 Errors
 ===
 
+* 쥬피터노트북 download as pdf 할때 생기는 에러
+  * 에러명
+  ```
+  500 : Internal Server Error
+  The error was:
+
+  nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+  ```
+  * 해결방법
+    * `https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex` 접속 후 windows버전 **MikTex** 설치하기
+    * 쥬피터노트북 껐다 키기 끝.
+
 * keras or tensorflow import시 numpy버전 때문에 발생하는 에러 
   * type 관련 에러
   ```
