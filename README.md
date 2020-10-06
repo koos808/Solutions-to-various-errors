@@ -123,7 +123,7 @@ Errors
 
 ---
 * keras,tensorflow gpu version install : 재설치 및 세팅
-  * tensorflow 설치 : `pip install --ignore-installed --upgrade tensorflow-gpu` or `pip install tensorflow-gpu`
+  * tensorflow 설치 : `pip install --ignore-installed --upgrade tensorflow-gpu` or `pip install tensorflow-gpu` or ` conda install -c anaconda tensorflow-gpu`
     * tensorflow 확인 
       ```
       import tensorflow as tf
