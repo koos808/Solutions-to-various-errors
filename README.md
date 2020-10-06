@@ -62,6 +62,14 @@ Errors
   * `C:\Users\(사용자이름)\.keras\keras.json`에 들어가서 Backend를 theano에서 tensorflow로 바꿔주면 된다.
   * https://3months.tistory.com/138
 
+* sklearn 에러
+  * 설치해도 계속해서 `ModuleNotFoundError: No module named 'sklearn'` 에러가 발생하는 경우
+  * 주피터 노트북 실행해서 아래 코드 실행시키면 된다.
+  ```
+  import sys
+  !{sys.executable} -m pip install sklearn
+  ```
+
 ---
 * Information 성 불필요 메시지(messages) 미출력
     ``` 
