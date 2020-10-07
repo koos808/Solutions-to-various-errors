@@ -78,9 +78,14 @@ Errors
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
     ```
     ```
-    # 2. User 에러 미표시
+    # 2. User 에러 미표시 무시
     import warnings
     warnings.filterwarnings("ignore", category=UserWarning)
+
+    # 3. WARNING:tensorflow:From C:\Python\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version. 에러 무시하는 방법(아래 코드 입력)
+    
+    old_v = tf.logging.get_verbosity()
+    tf.logging.set_verbosity(tf.logging.ERROR)
     ```
 
 ---
@@ -108,6 +113,14 @@ Errors
             # Memory growth must be set before GPUs have been initialized
             print(e)
     ```
+* tensorflow - GPU 에러
+  * `AttributeError: module 'tensorflow.python.framework.ops' has no attribute '_TensorLike'` 과 같은 에러
+  * 해결책 tensorflow 1.13.1 버전으로 재설치하기 
+
+* 주피터 노트북으로 localhost 계속 열어서 사용하다보면 kernel restarting 에러가 발생한다.
+  * `jupyter notebook list` 커멘드로 현재 열려있는 localhost 확인하기.
+  * `jupyter notebook stop 8888` -> 하나씩 종료시키기
+  * runtime 경로 : `C:\Users\koos\AppData\Roaming\jupyter\runtime`
 
 * anaconda, keras, tensorflow 설치
   * 1) Anaconda 설치
@@ -123,18 +136,12 @@ Errors
 
 ---
 * keras,tensorflow gpu version install : 재설치 및 세팅
-  * tensorflow 설치 : `pip install --ignore-installed --upgrade tensorflow-gpu` or `pip install tensorflow-gpu` or ` conda install -c anaconda tensorflow-gpu`
-    * tensorflow 확인 
-      ```
-      import tensorflow as tf
-      hello = tf.constant('Hello, TensorFlow!')
-      sess = tf.Session()
-      print(sess.run(hello))
-      ```
+  * `conda create --name YOUR_ENV_NAME python=3.6` 
+  * tensorflow 설치 : `pip install tensorflow-gpu==1.13.1`(내가 사용하는 코드) or `pip install --ignore-installed --upgrade tensorflow-gpu` or `pip install tensorflow-gpu` or ` conda install -c anaconda tensorflow-gpu`
   * keras 설치 : `conda install -c anaconda keras-gpu` or `conda install keras-gpu`
     * keras 확인
       * `import keras`
-  * Numpy 설치 : `pip install "numpy<1.17`
+  * Numpy 설치 : `pip install "numpy<1.17"`
   * [선택] pytorch 설치 : `conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`
   * [선택] conda 업데이트 : `conda update -n base -c defaults conda`
   * [선택] pip 업데이트 : `python -m pip install --upgrade pip`
@@ -142,6 +149,7 @@ Errors
   * [선택] 가상환경 만들기 : `conda create -n koos_keras python=3.6`
 
   * 패키지 설치
+    * [선택] 각종 패키치 설치 : `pip install pandas matplotlib sklearn`
     * [선택] opencv 설치 : `pip install opencv-python` -> `import cv2`
 
   * `vs code 필수 라이브러리 설치 목록`
