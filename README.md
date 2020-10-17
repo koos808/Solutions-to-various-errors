@@ -25,6 +25,11 @@ TIP
   * `<span style="color:Aqua ">AlphaZero</span>`
   * color 색상 표 참고 : https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/
 
+* VS code terminal :: Powershell에서 Command Prompt로 바꾸는 방법
+  * 기본으로는 Windows PowerShell이라고 저장되어 있으니 해당 Terminal을 Command Pormpot로 바꾼다.
+  * `Ctrl+Shift+P`(팔레트 선택) -> `Shell` 입력 -> `Command Prompt` 선택 ->  "Ctrl + `" 누르고 휴지통 버튼 눌러서 없앤다.
+  * 이후 "Ctrl + `"를 눌러서 Terminal 다시 실행시키면 (base)로 되어 있는 터미널이 보임.
+
 Errors
 ===
 
