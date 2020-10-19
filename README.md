@@ -143,7 +143,7 @@ Errors
 * keras,tensorflow gpu version install : 재설치 및 세팅
   * `conda create --name YOUR_ENV_NAME python=3.6` 
   * tensorflow 설치 : `pip install tensorflow-gpu==1.13.1`(내가 사용하는 코드) or `pip install --ignore-installed --upgrade tensorflow-gpu` or `pip install tensorflow-gpu` or ` conda install -c anaconda tensorflow-gpu`
-  * keras 설치 : `conda install -c anaconda keras-gpu` or `conda install keras-gpu`
+  * keras 설치 : `conda install keras-gpu` or `conda install -c anaconda keras-gpu`
     * keras 확인
       * `import keras`
   * Numpy 설치 : `pip install "numpy<1.17"`
@@ -156,6 +156,7 @@ Errors
   * 패키지 설치
     * [선택] 각종 패키치 설치 : `pip install pandas matplotlib sklearn`
     * [선택] opencv 설치 : `pip install opencv-python` -> `import cv2`
+    * [선택] 주피터 노트북 설정 : `pip install ipykernel`
 
   * `vs code 필수 라이브러리 설치 목록`
     * `Markdown+Math` : 수식 입력
