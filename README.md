@@ -156,7 +156,12 @@ Errors
   * 패키지 설치
     * [선택] 각종 패키치 설치 : `pip install pandas matplotlib sklearn`
     * [선택] opencv 설치 : `pip install opencv-python` -> `import cv2`
+<<<<<<< Updated upstream
     * [선택] 주피터 노트북 설정 : `pip install ipykernel`
+=======
+    * [확인] 패키치 목록 보기 : `pip list`
+    * [선택] : Jupyther notebook 설정: `pip install ipykernel`
+>>>>>>> Stashed changes
 
   * `vs code 필수 라이브러리 설치 목록`
     * `Markdown+Math` : 수식 입력
