@@ -127,6 +127,15 @@ Errors
   * `jupyter notebook stop 8888` -> 하나씩 종료시키기
   * runtime 경로 : `C:\Users\koos\AppData\Roaming\jupyter\runtime`
 
+* 주피터 노트북 버전 확인하는 방법
+  ```
+  #주피터 노트북에서 파이썬 버전 확인하는 법
+  import sys
+  print(sys.version)
+  ```
+
+* 주피
+
 * anaconda, keras, tensorflow 설치
   * 1) Anaconda 설치
   * 2) Anaconda 설치 후 Anaconda Prompt 실행
@@ -156,7 +165,20 @@ Errors
   * 패키지 설치
     * [선택] 각종 패키치 설치 : `pip install pandas matplotlib sklearn`
     * [선택] opencv 설치 : `pip install opencv-python` -> `import cv2`
-    * [선택] 주피터 노트북 설정 : `pip install ipykernel`
+    * [선택] 주피터 노트북 커널 설정 : `pip install ipykernel`
+      * Jupyter notebook에 현재 가상환경을 추가 : `python -m ipykernel install --user --name myvenv --display-name "PythonHome_p36"`
+      * 위와 동일 `python -m ipykernel install --user --name [virtualEnv] --display-name "[displayKenrelName]"`
+    * [선택] 주피터 노트북 nbextension 설치
+      * `pip install jupyter_contrib_nbextensions`
+      * 주피터 노트북에서 보일 수 있도록 등록 : `jupyter contrib nbextension install --user`
+      * 주피터 노트북 재실행
+      * 내가 주로 사용하는 기능
+        * `Table of Contents`, `Variable Inspector`, `Nbextenxions dashboard tab`, `Nbextensions edit menu item`
+        * `Codefolding`, `ExecuteTime`, `contrib_nbextensions_belp_item`, 
+    * [선택] 주피터 노트북에서 실시간 memory 사용량 모니터링 방법
+      * `pip install nbresuse`
+      * `jupyter serverextension enable --py nbresuse`
+      * 주피터 노트북 재실행
 
   * `vs code 필수 라이브러리 설치 목록`
     * `Markdown+Math` : 수식 입력
