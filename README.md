@@ -290,8 +290,8 @@ Errors
   * VGA Driver : 456.43
   * Cuda 설치 : `cuda_11.0.3_451.82_win10`
   * Cudnn 설치 : `cudnn-11.0-windows-x64-v8.0.3.33`
-  * anaconda 설치
-  * 가상환경 생성
+  * Anaconda 설치
+  * 가상환경 생성 : `conda create -n env_name` -> `conda activate env_name`
   * tensorflow-gpu 설치 : 2.1.0 -> `pip install tensorflow-gpu`
   * keras 설치 : `conda install keras==2.3.1`
   * 각종 패키지 설치 
