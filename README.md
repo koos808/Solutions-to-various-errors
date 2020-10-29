@@ -163,7 +163,7 @@ Errors
   * [선택] 가상환경 만들기 : `conda create -n koos_keras python=3.6`
 
   * 패키지 설치
-    * [선택] 각종 패키치 설치 : `pip install pandas matplotlib sklearn`
+    * [선택] 각종 패키치 설치 : `pip install jupyter pandas matplotlib sklearn opencv-python`
     * [선택] opencv 설치 : `pip install opencv-python` -> `import cv2`
     * [선택] 주피터 노트북 커널 설정 : `pip install ipykernel`
       * Jupyter notebook에 현재 가상환경을 추가 : `python -m ipykernel install --user --name myvenv --display-name "PythonHome_p36"`
@@ -177,6 +177,11 @@ Errors
         * `Codefolding`, `ExecuteTime`, `contrib_nbextensions_belp_item`, 
     * [선택] 주피터 노트북에서 실시간 memory 사용량 모니터링 방법
       * `pip install nbresuse`
+      * 바로 안보이면 아래 코드 실행
+      * `jupyter serverextension enable --py nbresuse --sys-prefix`
+      * `jupyter nbextension install --py nbresuse --sys-prefix`
+      * `jupyter nbextension enable --py nbresuse --sys-prefix`
+      * 그래도 안되면 아래 코드 실행
       * `jupyter serverextension enable --py nbresuse`
       * 주피터 노트북 재실행
 
@@ -277,3 +282,14 @@ Errors
       pip install opencv-contrib-python
       ```
 
+# rtx 3090 setting
+  * OS : windows10
+  * VGA : RTX 3090
+  * VGA Driver : 456.43
+  * Cuda 설치 : `cuda_11.0.3_451.82_win10`
+  * Cudnn 설치 : `cudnn-11.0-windows-x64-v8.0.3.33`
+  * anaconda 설치
+  * 가상환경 생성
+  * tensorflow-gpu 설치 : 2.1.0 -> `pip install tensorflow-gpu`
+  * keras 설치 : `conda install keras==2.3.1`
+  * 각종 패키지 설치 
