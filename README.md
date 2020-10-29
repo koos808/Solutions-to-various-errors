@@ -134,7 +134,9 @@ Errors
   print(sys.version)
   ```
 
-* 주피
+* Anaconda error
+  * Conda process error : `Multiple Errors Encountered.` 에러
+  * 해결책 : 아나콘다 네비게이터 관리자 권한으로 열기
 
 * anaconda, keras, tensorflow 설치
   * 1) Anaconda 설치
