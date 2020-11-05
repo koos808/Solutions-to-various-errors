@@ -256,7 +256,7 @@ Errors
     * 이후 `source ~/.bashrc` 실행하면 설치 완료
   * 3.주피터노트북 설치
     * 설치 : `pip install jupyter --user`
-    * 설치 확인 : `jupyter notebook`
+    * [선택] 설치 확인 : `jupyter notebook`
     * 기본 설정파일 생성 : `jupyter-notebook --generate-config`
     * 원격 연결시 사용할 비밀번호 설정하기
       * 커멘드 창에서 `ipython` 입력 후 아래 입력
@@ -269,20 +269,31 @@ Errors
     * VI에디터로 설정파일 수정하기
       * jupyter 위에서 생성한 환경설정 파일은 리눅스의 홈 디렉토리아래 `.jupyter`라는 폴더 내부에 생성된다. 환경설정 파일이 존재하는 위치로 이동한 후 vi에디터를 이용해 수정한다.
       * `cd ~` 디렉토리 이동
-      * `cd .jupyter`
+      * `cd ~/.jupyter`
       * `vi jupyter_notebook_config.py`
-      * 참고 : vi 에디터 단축키 -> `i`(입력(insert)모드로 전환), `dd`(커서가 위치한 줄 삭제), `:wq`(저장 및 종료), `:/(찾고싶은 내용)`(검색), ESC(모드 빠져 나오기)
-      * 아래 사이트 참고하면 됨.
+      * vi 실행 창에서 "i" 버튼 누르고 제일 상단에 하단 코드 작성(괄호 제외)
+      * 
+        ```
+        c = get_config()
+        c.JupyterApp.config_file_name = 'juyter_notebook_config.py'
+        c.NotebookApp.allow_origin = '*' (접속 허용 ip – 본인 ip 아니면 * (전체 허용))
+        c.NotebookApp.ip = 'xxx.xx.xxx((서버 ip)' 
+        c.NotebookApp.open_browser = False # False이면 jupyter notebook 실행시 창이 아닌 url이 나온다.
+        c.NotebookApp.password = u'아까 복사했던 그 sha1 ~~~~~ 여기에 복사하기’
+        ```
+      * esc 버튼 누르고 :wq 입력 후 엔터
+      * [참고] : vi 에디터 단축키 -> `i`(입력(insert)모드로 전환), `dd`(커서가 위치한 줄 삭제), `:wq`(저장 및 종료), `:/(찾고싶은 내용)`(검색), ESC(모드 빠져 나오기)
       * 참고 사이트 : http://blog.naver.com/PostView.nhn?blogId=skyshin0304&logNo=221587513170&parentCategoryNo=&categoryNo=31&viewDate=&isShowPopularPosts=true&from=search
-    * open-cv imshow 안 될 때 아래 커멘드 입력
-      ```
-      sudo apt-get -y install libgtk2.0-dev
-      sudo apt-get -y install pkg-config
-      conda remove opencv
-      conda update conda
-      conda install --channel menpo opencv
-      pip install opencv-contrib-python
-      ```
+
+* open-cv imshow 안 될 때 아래 커멘드 입력
+  ```
+  sudo apt-get -y install libgtk2.0-dev
+  sudo apt-get -y install pkg-config
+  conda remove opencv
+  conda update conda
+  conda install --channel menpo opencv
+  pip install opencv-contrib-python
+  ```
 
 # rtx 3090 setting
   * OS : windows10
