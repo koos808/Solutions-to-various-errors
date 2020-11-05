@@ -245,7 +245,7 @@ Errors
   * `DB Browser for SQLite` 설치 후 저장한 db확인
   * 참고 : https://excelsior-cjh.tistory.com/105
 
-# 우분투(ubuntu 16.04) 환경 세팅
+# 우분투(ubuntu 18.04) 환경 세팅
   * 1.anaconda3 설치
     * 설치 url : `https://docs.anaconda.com/anaconda/install/hashes/lin-3-64/` 
     * ex) Anaconda3-2020.02-Linux-x86_64.sh
@@ -284,6 +284,32 @@ Errors
       * esc 버튼 누르고 :wq 입력 후 엔터
       * [참고] : vi 에디터 단축키 -> `i`(입력(insert)모드로 전환), `dd`(커서가 위치한 줄 삭제), `:wq`(저장 및 종료), `:/(찾고싶은 내용)`(검색), ESC(모드 빠져 나오기)
       * 참고 사이트 : http://blog.naver.com/PostView.nhn?blogId=skyshin0304&logNo=221587513170&parentCategoryNo=&categoryNo=31&viewDate=&isShowPopularPosts=true&from=search
+  * 4.각종 패키지 섳치
+    * tensorflow 설치 : `pip install tensorflow-gpu`
+    * keras 설치 : `pip install keras`
+    * 주피터 노트북 포함 각종 패키지 설치
+      * `pip install jupyter pandas matplotlib sklearn opencv-python`
+    * [선택] : `pip install keras_applications`
+  * 5.[선택]쥬피터 노트북(Jupyter notebook) 테마 변경하기
+    * thema 패키지 설치 : `pip install jupyterthemes`
+    * 내 테마 설정 : `jt -t onedork -T -N -kl -f roboto -fs 11 -tfs 11 -nfs 13 -tfs 13 -ofs 10 -cellw 80% -lineh 170 -cursc r -cursw 6`
+  * 6.[선택] 주피터 노트북 nbextension 설치
+    * `pip install jupyter_contrib_nbextensions`
+    * 주피터 노트북에서 보일 수 있도록 등록 : `jupyter contrib nbextension install --user`
+    * 주피터 노트북 재실행
+    * 내가 주로 사용하는 기능
+      * `Table of Contents`, `Variable Inspector`, `Nbextenxions dashboard tab`, `Nbextensions edit menu item`
+      * `Codefolding`, `ExecuteTime`, `contrib_nbextensions_belp_item`, 
+  * 7.[선택] 주피터 노트북에서 실시간 memory 사용량 모니터링 방법
+    * `pip install nbresuse`
+    * 바로 안보이면 아래 코드 실행
+    * `jupyter serverextension enable --py nbresuse --sys-prefix`
+    * `jupyter nbextension install --py nbresuse --sys-prefix`
+    * `jupyter nbextension enable --py nbresuse --sys-prefix`
+    * 그래도 안되면 아래 코드 실행
+    * `jupyter serverextension enable --py nbresuse`
+    * 주피터 노트북 재실행
+
 
 * open-cv imshow 안 될 때 아래 커멘드 입력
   ```
@@ -294,6 +320,7 @@ Errors
   conda install --channel menpo opencv
   pip install opencv-contrib-python
   ```
+
 * 서버에서 서버(서버간) 폴더, 파일 복사하기
   * sch 이용
   * instar 폴더를 B서버에 koos 폴더 안에 복사 
@@ -307,10 +334,9 @@ Errors
   * OS : windows10
   * VGA : RTX 3090
   * VGA Driver : 456.43
-  * Cuda 설치 : `cuda_11.0.3_451.82_win10`
-  * Cudnn 설치 : `cudnn-11.0-windows-x64-v8.0.3.33`
+  * Cuda 설치 : `cuda_11.0.3_451.82_win10`(cuda 11.0 업데이트된 최신버전)
+  * Cudnn 설치 : `cudnn-11.0-windows-x64-v8.0.3.33`(cudnn)
   * Anaconda 설치
-  * 가상환경 생성 : `conda create -n env_name` -> `conda activate env_name`
-  * tensorflow-gpu 설치 : 2.1.0 -> `pip install tensorflow-gpu`
-  * keras 설치 : `conda install keras==2.3.1`
-  * 각종 패키지 설치 
+  * 가상환경 생성 : `conda create -n env_name python=3.8` -> `conda activate env_name`
+  * tensorflow-gpu 설치 : `pip install tf-nightly-gpu==2.5.0.dev20201102`
+  * 각종 패키지 설치 : `conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch`
