@@ -75,6 +75,13 @@ Errors
   !{sys.executable} -m pip install sklearn
   ```
 
+* pydot, graphviz 설치 순서
+  ```
+  pip install pyparsing
+  pip install graphviz
+  pip install pydot
+  conda install graphviz
+  ```
 ---
 * Information 성 불필요 메시지(messages) 미출력
     ``` 
