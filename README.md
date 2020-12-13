@@ -205,6 +205,7 @@ Errors
   * `Cudnn` : 7.4.x (7.4.1 추천)
   * `tensorflow-gpu` : 1.13.1
     * `pip install --upgrade tensorflow-gpu==1.13.1`
+    * 
     * 버전 확인 : https://www.tensorflow.org/install/source_windows#tensorflow_1x=
   * numpy 오류 나기 때문에 재설치
     * `pip install "numpy<1.17"`
@@ -344,6 +345,7 @@ Errors
   * Cuda 설치 : `cuda_11.0.3_451.82_win10`(cuda 11.0 업데이트된 최신버전)
   * Cudnn 설치 : `cudnn-11.0-windows-x64-v8.0.3.33`(cudnn)
   * Anaconda 설치
+  * Conda update : `conda update -n base conda`
   * 가상환경 생성 : `conda create -n env_name python=3.8` -> `conda activate env_name`
   * tensorflow-gpu 설치 : `pip install tf-nightly-gpu==2.5.0.dev20201102`
   * 각종 패키지 설치 : `conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch`
