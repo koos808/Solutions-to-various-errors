@@ -81,6 +81,7 @@ Errors
   pip install graphviz
   pip install pydot
   conda install graphviz
+  => 이후 kerneral restart
   ```
 ---
 * Information 성 불필요 메시지(messages) 미출력
@@ -287,12 +288,12 @@ Errors
         c.NotebookApp.allow_origin = '*' (접속 허용 ip – 본인 ip 아니면 * (전체 허용))
         c.NotebookApp.ip = 'xxx.xx.xxx((서버 ip)' 
         c.NotebookApp.open_browser = False # False이면 jupyter notebook 실행시 창이 아닌 url이 나온다.
-        c.NotebookApp.password = u'아까 복사했던 그 sha1 ~~~~~ 여기에 복사하기’
+        c.NotebookApp.password = u'아까 복사했던 그 sha1 ~~~~~ 여기에 복사하기'
         ```
       * esc 버튼 누르고 :wq 입력 후 엔터
       * [참고] : vi 에디터 단축키 -> `i`(입력(insert)모드로 전환), `dd`(커서가 위치한 줄 삭제), `:wq`(저장 및 종료), `:/(찾고싶은 내용)`(검색), ESC(모드 빠져 나오기)
       * 참고 사이트 : http://blog.naver.com/PostView.nhn?blogId=skyshin0304&logNo=221587513170&parentCategoryNo=&categoryNo=31&viewDate=&isShowPopularPosts=true&from=search
-  * 4.각종 패키지 섳치
+  * 4.각종 패키지 설치
     * tensorflow 설치 : `pip install tensorflow-gpu`
     * keras 설치 : `pip install keras`
     * 주피터 노트북 포함 각종 패키지 설치
