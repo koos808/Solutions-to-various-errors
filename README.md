@@ -33,7 +33,10 @@ TIP
 Errors
 ===
 
-* 쥬피터노트북 download as pdf 할때 생기는 에러
+* 주피터노트북 Tab, shortcut 안될 때 해결하는 가장 빠른 방법 (TAB completion)
+  * `%config Completer.use_jedi = False` 실행시키고 사용하기
+
+* 주피터노트북 download as pdf 할때 생기는 에러
   * 에러명
   ```
   500 : Internal Server Error
