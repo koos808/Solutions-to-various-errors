@@ -89,6 +89,7 @@ Errors
   * keras model summary plot 그리기
     * `keras.utils.plot_model(model, "concate_model.png", show_shapes=True)`
 ---
+
 * Information 성 불필요 메시지(messages) 미출력
     ``` 
     # 1. Info성 불필요 메시지 미출력을 위한 작업
