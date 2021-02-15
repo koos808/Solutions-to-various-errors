@@ -107,6 +107,11 @@ Errors
     tf.logging.set_verbosity(tf.logging.ERROR)
     ```
 
+
+* python 2.7, pip, pip3 에러
+  * 에러명 : `DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality. 에러`
+  * `/usr/bin/python3 -m pip install --upgrade pip` 실행
+
 ---
 * GPU 사용시 설정 해줘야 할 것
   * 추천 방법
@@ -210,9 +215,9 @@ Errors
 * 연구실 컴퓨터 GTX 2080 TI에 맞는 CUDA, Cudnn, tensorflow version
   * `CUDA` : 10.0
   * `Cudnn` : 7.4.x (7.4.1 추천)
-  * `tensorflow-gpu` : 1.13.1
+  * `tensorflow-gpu` : 1.13.1 -> `2.3.0`이 제일 적합
     * `pip install --upgrade tensorflow-gpu==1.13.1`
-    * 
+    * `pip install --upgrade tensorflow-gpu==2.3.0`
     * 버전 확인 : https://www.tensorflow.org/install/source_windows#tensorflow_1x=
   * numpy 오류 나기 때문에 재설치
     * `pip install "numpy<1.17"`
