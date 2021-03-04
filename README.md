@@ -269,7 +269,11 @@ Errors
   * 1.anaconda3 설치
     * 설치 url : `https://docs.anaconda.com/anaconda/install/hashes/lin-3-64/` 
     * ex) Anaconda3-2020.02-Linux-x86_64.sh
-    * commend에서 `bash Anaconda3-2020.02-Linux-x86_64.sh` 실행
+    * 1) commend에서 `bash Anaconda3-2020.02-Linux-x86_64.sh` 실행
+    * 2) Enter 계속 입력
+    * 3) Anaconda3 will now be installed into this location: 이러한 문구 나올 때 path 안바꾸고 싶으면 그냥 ENTER -> `그냥 ENTER`(기본 : /home/username/anaconda3)
+    * unpacking payload... 기다리다가 -> `yes` 입력(한번 더 초기화하냐는 질문)
+    * `source ~/.bashrc` 입력하면 커멘드 옆에 (base)가 붙게 된다. 아나콘다 설치 끝
   * 2.가상환경 만들기
     * `conda create -n (가상환경이름) python=(파이썬버전)`
     * ex) `conda create -n koos_detect python=3.6`
