@@ -32,9 +32,7 @@ TIP
 
 * VS code Python 사용하기
   * Python extension 설치하기 ( https://marketplace.visualstudio.com/items?itemName=ms-python.python ) 
-  * 
-  * 
-
+  * `Ctrl+Shift+P` -> `Python: Select Interpreter` -> Entire WorkSpace -> 원하는 env python 선택
 
 Errors
 ===
