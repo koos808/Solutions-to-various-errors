@@ -34,6 +34,9 @@ TIP
   * Python extension 설치하기 ( https://marketplace.visualstudio.com/items?itemName=ms-python.python ) 
   * `Ctrl+Shift+P` -> `Python: Select Interpreter` -> Entire WorkSpace -> 원하는 env python 선택
 
+* VS code ssh server 연결(서버 연결)
+  * extension -> `remote - SSH` - `remote - SSH:Connect to Host` -> add -> `ssh jinmo@165.132.xxx.xxx` -> config 저장(`C:\Users\koos\.ssh\config`) -> connect -> linux -> continue -> 비밀번호 입력
+  * RTX 2080 TI -> CUDA 10.1 -> pytorch 최소 버전 설치( conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch ) -> NAS 실험에서는 python 3.6 사용
 Errors
 ===
 
