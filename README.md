@@ -30,6 +30,12 @@ TIP
   * `Ctrl+Shift+P`(팔레트 선택) -> `Shell` 입력 -> `Command Prompt` 선택 ->  "Ctrl + `" 누르고 휴지통 버튼 눌러서 없앤다.
   * 이후 "Ctrl + `"를 눌러서 Terminal 다시 실행시키면 (base)로 되어 있는 터미널이 보임.
 
+* VS code Python 사용하기
+  * Python extension 설치하기 ( https://marketplace.visualstudio.com/items?itemName=ms-python.python ) 
+  * 
+  * 
+
+
 Errors
 ===
 
