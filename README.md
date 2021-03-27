@@ -4,6 +4,30 @@ Solutions to various errors ::: 에러 발생 시 대처 및 해결 방안
 TIP
 ===
 
+### Slack 채널에 알림오도록 설정하기
+* 순서
+  * 0) slack 알림 받을 슬랙 채널 개설(있으면 skip)
+  * 1) slack - Administration - Manage app 들어가기
+  * 2) Search App Directory에서 `Incoming WebHooks` 검색 후 `Add to Slack` 누르기
+  * 3) Post to Channel에서 알림 받으려는 채널 선택
+  * 4) `Add Incoming WebHooks integration` 클릭
+  * 5) Webhook URL과 Sending Messages 복사
+    * 5-1) Webhook URL은 request를 보낼 url
+    * 5-2) Sending Messages는 request할 때 같이 보낼 내용  
+  * 6) Customize Name, Icon 원하는대로 설정하기
+  * 7) Save Settings -> 상단 `Your settings have been saved.` 뜨면 끝.
+  * 8) 파이썬 코드 작성 후 테스트
+    * 8-1) `pip install requests`
+    * 8-3)
+    ```
+    def send_message_to_slack(text): 
+      url = "WebHook Url" 
+      payload = { "text" : text } 
+      requests.post(url, json=payload)
+    send_message_to_slack("Send Message Using Python")
+    ```
+  * 참고 : https://somjang.tistory.com/entry/Python-Slack-WebHooks-%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%9E%91%EC%97%85-%EC%A7%84%ED%96%89%EC%83%81%ED%99%A9-%EC%95%8C%EB%A6%BC-%EB%B0%9B%EC%95%84%EB%B3%B4%EA%B8%B0-feat-Incoming-WebHooks
+
 ### VS Code
 * vscode 초기 세팅
   * 확장 tool 설치
