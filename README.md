@@ -18,6 +18,7 @@ TIP
   * 7) Save Settings -> 상단 `Your settings have been saved.` 뜨면 끝.
   * 8) 파이썬 코드 작성 후 테스트
     * 8-1) `pip install requests`
+    * 8-2) `import requests`
     * 8-3)
     ```
     def send_message_to_slack(text): 
