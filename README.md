@@ -141,6 +141,18 @@ Errors
     tf.logging.set_verbosity(tf.logging.ERROR)
     ```
 
+* nvcc -V 안될때 해결법
+  * CUDA 깔았다면?
+    * 환경변수 설정 : `export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}`
+  * 64-bit 환경변수 설정
+    * `export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}`
+  * 32-bit 환경변수 설정
+    * `export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}`
+
+* 재부팅을 하면 설정한 경로가 해제되기 때문에 자동으로 설정되게 하기 위해 bashrc 파일에 변수 추가
+  * `export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}`
+  * `export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}`
+  * `export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}`
 
 * python 2.7, pip, pip3 에러
   * 에러명 : `DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality. 에러`
