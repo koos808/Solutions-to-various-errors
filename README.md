@@ -50,16 +50,16 @@ TIP
   * `<span style="color:Aqua ">AlphaZero</span>`
   * color 색상 표 참고 : https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/
 
-* VS code terminal :: Powershell에서 Command Prompt로 바꾸는 방법
+* vs code terminal :: Powershell에서 Command Prompt로 바꾸는 방법
   * 기본으로는 Windows PowerShell이라고 저장되어 있으니 해당 Terminal을 Command Pormpot로 바꾼다.
   * `Ctrl+Shift+P`(팔레트 선택) -> `Shell` 입력 -> `Command Prompt` 선택 ->  "Ctrl + `" 누르고 휴지통 버튼 눌러서 없앤다.
   * 이후 "Ctrl + `"를 눌러서 Terminal 다시 실행시키면 (base)로 되어 있는 터미널이 보임.
 
-* VS code Python 사용하기
+* vs code Python 사용하기
   * Python extension 설치하기 ( https://marketplace.visualstudio.com/items?itemName=ms-python.python ) 
   * `Ctrl+Shift+P` -> `Python: Select Interpreter` -> Entire WorkSpace -> 원하는 env python 선택
 
-* VS code ssh server 연결(서버 연결)
+* vs code ssh server 연결(서버 연결)
   * extension -> `remote - SSH` - `remote - SSH:Connect to Host` -> add -> `ssh jinmo@165.132.xxx.xxx` -> config 저장(`C:\Users\koos\.ssh\config`) -> connect -> linux -> continue -> 비밀번호 입력
   * RTX 2080 TI -> CUDA 10.1 -> pytorch 최소 버전 설치( conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch ) -> NAS 실험에서는 python 3.6 사용
   * Cuda와 맞는 Pytorch 버전 확인( https://pytorch.org/get-started/previous-versions/ )
