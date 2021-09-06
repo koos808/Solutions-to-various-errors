@@ -276,6 +276,9 @@ Errors
     * 버전 이상 설치 : `idna>=2.8`
     * 2버전대의 아무 버전이나 설치 : `idna>=2.*`
 
+* 주피터 노트북에서 탭(Tab)이 작동안할때
+  * `%config Completer.use_jedi = False` 코드 실행시키고 사용하면 됨.
+
 * iopub 등의 쥬피터 노트북 메모리 부족 
   * error example
     ```
