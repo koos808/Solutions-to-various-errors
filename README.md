@@ -394,15 +394,6 @@ Errors
   pip install opencv-contrib-python
   ```
 
-* 서버에서 서버(서버간) 폴더, 파일 복사하기
-  * sch 이용
-  * instar 폴더를 B서버에 koos 폴더 안에 복사 
-    * `scp -r /home/koos/instar remoteID@remoteIP주소:/home1/koos`
-  * instar 파일을 B서버에 koos 폴더 안에 복사 
-    * `scp -r /home/koos/instar/test.txt remoteID@remoteIP주소:/home1/koos/`
-  * 조건 : 예를 들어 "A"서버에서 "B"서버로 폴더나 파일을 이동하려면 "B" 서버에 "A"서버 IP를 방화벽 접속 가능하도록 권한을 부여해야 한다.
-  * 반대도 마찬가지로 파일 이동가능하도록 방화벽 권한을 주어야 한다.
-
 # rtx 3090 setting
   * OS : windows10
   * VGA : RTX 3090
