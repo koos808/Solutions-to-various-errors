@@ -122,6 +122,9 @@ Errors
   ```
   * keras model summary plot 그리기
     * `keras.utils.plot_model(model, "concate_model.png", show_shapes=True)`
+  * graphviz 에러
+    * ubuntu : `sudo apt install graphviz` 로 설치
+    * windows : msi 패키지 설치 후 환경변수 등록(인터넷 서칭)
 ---
 
 * Information 성 불필요 메시지(messages) 미출력
