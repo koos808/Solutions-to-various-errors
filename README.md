@@ -408,3 +408,40 @@ Errors
   * 가상환경 생성 : `conda create -n env_name python=3.8` -> `conda activate env_name`
   * tensorflow-gpu 설치 : `pip install tf-nightly-gpu==2.5.0.dev20201102`
   * 각종 패키지 설치 : `conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch`
+
+# Slack 이전 메세지 확인하기
+  * 아파치 설치
+    * `https://www.apachelounge.com/download/`
+    * Win 64 버전 설치 : 현시점 기준 `httpd-2.4.52-win64-VS16.zip `
+    * 압축파일 풀기 -> Apache24 폴더를 C 드라이브로 복사 -> Apache24>conf>httpd.conf 파일 수정(메모장으로 열기) -> ServerRoot "${SRVROOT}"를 ServerRoot "c:/Apache24"로 변경 -> DocumentRoot "${SRVROOT}/htdocs"를 `DocumentRoot "c:/Apache24/htdocs"`로 변경
+    * 설치 및 실행
+      * 폴더 이동 >> cd c:\Apache24\bin 
+      * 설치 >>  httpd.exe -k install  
+      * >> httpd -n "Apache2.4" -t
+      * >> httpd -k start
+      * 아파치 모니터 실행파일 실행 : C:\Apache24\bin\ApacheMonitor
+      * 인터넷 주소창에  http://localhost/ 접속 후  It works! 라고 뜨면 설치 완료
+  * PHP 설치
+    * https://windows.php.net/download/
+    * 현시점 기준 : VS16 x64 Thread Safe (2021-Dec-15 11:08:34)
+    * 압축파일 풀기 -> 폴더 이름 php8로 변경 -> c드라이브에 복사
+    * php8 폴더 내  php.ini-production 파일 메모장으로 열어서 `;extension_dir = "./"` 부분 주석 지우고 `extension_dir = "C:/php8/ext"`로 변경
+    * 
+    * C:\Apache24/conf/httpd.conf 파일을 열어서, DirectoryIndex 부분에 index.php 내용 추가
+      ``` 
+      <IfModule dir_module>
+        DirectoryIndex index.php index.html
+      </IfModule>
+      ```
+    * 위 파일 맨 아래에 추가로 내용 추가
+      ```
+      LoadModule php8_module "C:/php8/php8apache2_4.dll"
+      AddType application/x-httpd-php .html .php
+      AddHandler application/x-httpd-php .php
+      ```
+
+
+
+
+
+    * 참고 : https://fifo22.tistory.com/34
