@@ -439,6 +439,14 @@ Errors
       AddType application/x-httpd-php .html .php
       AddHandler application/x-httpd-php .php
       ```
+    * C:\Apache24\htdocs 폴더에 phpinfo.php 메모장 파일 생성
+      ```
+      <?php
+      phpinfo();
+      ?>
+      ```
+    * 
+
 
 
 
